@@ -1,0 +1,23 @@
+<h2 align="center">Liste des medecins</h2>
+<ul>
+  <li *ngFor="let medecin of medecins">{{medecin}}</li>
+</ul>
+
+<table align="center" border="1" class="table">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Age</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of medecinsDetails">
+      <td>{{m.nom}}</td>
+      <td>{{m.prenom}}</td>
+      <td>{{m.age}}</td>
+      <td>{{m.grade}}</td>
+    </tr>
+  </tbody>
+</table>
