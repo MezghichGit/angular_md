@@ -2,6 +2,7 @@ export interface Medecin{
   nom:string,
   prenom:string,
   age:number,
-  grade:string
+  grade:string,
+  photo:string
 
 }
