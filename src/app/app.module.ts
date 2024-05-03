@@ -9,6 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { ListPostsComponent } from './list-posts/list-posts.component';
+import { ListProvidersComponent } from './list-providers/list-providers.component';
+import { AddProviderComponent } from './add-provider/add-provider.component';
+import { UpdateProviderComponent } from './update-provider/update-provider.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ListPostsComponent } from './list-posts/list-posts.component';
     DrpipePipe,
     MedecinComponent,
     ListUsersComponent,
-    ListPostsComponent
+    ListPostsComponent,
+    ListProvidersComponent,
+    AddProviderComponent,
+    UpdateProviderComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
