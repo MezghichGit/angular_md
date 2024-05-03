@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Provider } from '../models';
 import { ProviderService } from '../services/provider.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-providers',
@@ -11,7 +12,7 @@ export class ListProvidersComponent implements OnInit {
 
   providers: Provider[] = [];
 
-  constructor(private providerService: ProviderService) { }
+  constructor(private providerService: ProviderService, private router:Router) { }
 
   ngOnInit(): void {
     this.refresh();
@@ -25,7 +26,9 @@ export class ListProvidersComponent implements OnInit {
       error => console.log(error)
     );
   }
-
+  goAdd(){
+     this.router.navigate(["addProvider"]);
+  }
   deleteProvider(id:number)
   {
     this.providerService.deleteProvider(id).subscribe(

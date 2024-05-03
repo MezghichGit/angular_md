@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Provider } from '../models';
 
 @Component({
   selector: 'app-add-provider',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './add-provider.component.css'
 })
 export class AddProviderComponent {
-
+  addProvider(provider:any){
+    console.log(provider.value)
+  }
 }
