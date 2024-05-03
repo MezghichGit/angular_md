@@ -25,4 +25,14 @@ export class ListProvidersComponent implements OnInit {
       error => console.log(error)
     );
   }
+
+  deleteProvider(id:number)
+  {
+    this.providerService.deleteProvider(id).subscribe(
+      data=>{
+       // console.log(data);
+        this.refresh();
+      }
+    );
+  }
 }
