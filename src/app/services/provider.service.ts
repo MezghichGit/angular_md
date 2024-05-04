@@ -19,9 +19,9 @@ export class ProviderService {
     return this.http.post<Provider>(environment.baseUrl+"/providers", provider);
   }
 
-  deleteProvider(idProvider:number)
+  deleteProvider(provider:Provider)
   {
-    return this.http.delete(environment.baseUrl+"/providers/"+idProvider);
+    return this.http.delete(environment.baseUrl+"/providers/"+provider.id);
   }
 
   updateProvider(idProvider:number, provider:Provider)

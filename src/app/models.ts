@@ -13,7 +13,7 @@ export interface Post {
   body: string
 }
 export interface Provider {
-  id: number,
+  id?: number,
   name: string,
   address: string,
   email: string

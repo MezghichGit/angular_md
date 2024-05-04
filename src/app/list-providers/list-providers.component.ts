@@ -29,9 +29,9 @@ export class ListProvidersComponent implements OnInit {
   goAdd(){
      this.router.navigate(["addProvider"]);
   }
-  deleteProvider(id:number)
+  deleteProvider(provider:Provider)
   {
-    this.providerService.deleteProvider(id).subscribe(
+    this.providerService.deleteProvider(provider).subscribe(
       data=>{
        // console.log(data);
         this.refresh();
