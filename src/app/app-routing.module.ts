@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListProvidersComponent } from './list-providers/list-providers.component';
 import { AddProviderComponent } from './add-provider/add-provider.component';
 import { ContactComponent } from './contact/contact.component';
+import { UpdateProviderComponent } from './update-provider/update-provider.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     path:"contact",
     component:ContactComponent
   },
+  {
+    path:"updateProvider/:id",
+    component:UpdateProviderComponent
+  }
 ];
 
 @NgModule({

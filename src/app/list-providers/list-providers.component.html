@@ -9,6 +9,7 @@
       <th>Address</th>
       <th>Email</th>
       <th>Delete</th>
+      <th>Update</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
       <td>{{provider.address}}</td>
       <td>{{provider.email}}</td>
       <td><button class="btn btn-danger" (click)="deleteProvider(provider)">Supprimer</button></td>
+      <td><button class="btn btn-warning" (click)="updateProvider(provider)">Modifier</button></td>
     </tr>
   </tbody>
 </table>

@@ -38,4 +38,9 @@ export class ListProvidersComponent implements OnInit {
       }
     );
   }
+  updateProvider(provider:any)
+  {
+    //alert(provider.id);
+    this.router.navigate(["updateProvider",provider.id]);
+  }
 }
