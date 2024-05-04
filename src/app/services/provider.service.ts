@@ -28,4 +28,9 @@ export class ProviderService {
   {
     return this.http.put<Provider>(environment.baseUrl+"/providers/"+idProvider, provider);
   }
+
+  getProviderById(idProvider:number)
+  {
+    return this.http.get<Provider>(environment.baseUrl+"/providers/"+idProvider);
+  }
 }
