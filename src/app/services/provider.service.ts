@@ -24,9 +24,9 @@ export class ProviderService {
     return this.http.delete(environment.baseUrl+"/providers/"+provider.id);
   }
 
-  updateProvider(idProvider:number, provider:Provider)
+  updateProvider(provider:Provider)
   {
-    return this.http.put<Provider>(environment.baseUrl+"/providers/"+idProvider, provider);
+    return this.http.put<Provider>(environment.baseUrl+"/providers/"+provider.id, provider);
   }
 
   getProviderById(idProvider:number)
