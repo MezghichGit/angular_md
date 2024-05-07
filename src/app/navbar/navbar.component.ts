@@ -20,7 +20,7 @@ export class NavbarComponent {
 }*/
 
 logout(){
-  this.loginService.logOut
+  this.loginService.logOut()
   this.router.navigate(['login']);
 }
 }
