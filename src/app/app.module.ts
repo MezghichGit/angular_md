@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { DrpipePipe } from './drpipe.pipe';
 import { MedecinComponent } from './medecin/medecin.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { ListPostsComponent } from './list-posts/list-posts.component';
 import { ListProvidersComponent } from './list-providers/list-providers.component';
@@ -16,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { LogoutComponent } from './logout/logout.component';
     HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]
 })
