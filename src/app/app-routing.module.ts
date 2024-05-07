@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AuthGaurdService } from './services/auth-gaurd.service';
 
 
 
@@ -13,22 +14,33 @@ const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "app-navbar" },
   {
     path: "listeProviders",
-    component: ListProvidersComponent
+    component: ListProvidersComponent,
+    canActivate:[AuthGaurdService]
   },
   {
     path: "addProvider",
-    component: AddProviderComponent
+    component: AddProviderComponent,
+    canActivate:[AuthGaurdService]
   },
   {
     path: "contact",
-    component: ContactComponent
+    component: ContactComponent,
+    canActivate:[AuthGaurdService]
   },
   {
     path: "updateProvider/:id",
-    component: UpdateProviderComponent
+    component: UpdateProviderComponent,
+    canActivate:[AuthGaurdService]
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'logout', component: LogoutComponent },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent,
+    canActivate:[AuthGaurdService]
+  },
 
 
 ];
