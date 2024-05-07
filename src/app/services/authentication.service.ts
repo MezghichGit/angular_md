@@ -10,6 +10,7 @@ export class AuthenticationService {
   authenticate(username:string, password:string) {
     if (username === "amine" && password === "1234") {
       sessionStorage.setItem('username', username)
+
       return true;
     } else {
       return false;
