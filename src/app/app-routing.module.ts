@@ -44,6 +44,10 @@ const routes: Routes = [
   {
     path: 'register',
     component:RegiterFormComponent
+  },
+  {
+    path: 'dashbaordAdmin',
+    loadChildren: () => import('./dashboard-admin/dashboard-admin.module').then(m => m.DashboardAdminModule)
   }
 
 
