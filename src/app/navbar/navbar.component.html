@@ -15,10 +15,7 @@
         <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="addProvider" routerLinkActive="active">Add
           Provider</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="contact"
-          routerLinkActive="active">Contact</a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="/login" *ngIf="!loginService.isUserLoggedIn()"
           routerLinkActive="active">Login</a>
@@ -26,6 +23,10 @@
       <li class="nav-item">
         <a class="nav-item nav-link"  (click)="logout()" *ngIf="loginService.isUserLoggedIn()"
           routerLinkActive="active">LogOut</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="contact"
+          routerLinkActive="active">Contact</a>
       </li>
     </ul>
 

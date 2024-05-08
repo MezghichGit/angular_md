@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
-  addContact(contactForm:any){
-    alert(contactForm.nom+" "+contactForm.prenom+" "+contactForm.email+" "+contactForm.message);
-  }
+  ourCampany : string = "Smart IT Partner";
+
 }

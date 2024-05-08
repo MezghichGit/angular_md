@@ -24,8 +24,7 @@ const routes: Routes = [
   },
   {
     path: "contact",
-    component: ContactComponent,
-    canActivate:[AuthGaurdService]
+    component: ContactComponent
   },
   {
     path: "updateProvider/:id",
