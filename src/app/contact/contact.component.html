@@ -1,8 +1,8 @@
 <h2 align="center">Formulaire de contact</h2>
 
-<app-apropos [campany]="ourCampany"></app-apropos>
+<app-apropos (eventToSend)="processEvent($event)"  [campany]="ourCampany"></app-apropos>
 
-<app-message-contact></app-message-contact>
+<app-message-contact [messageFils]="messageParent"></app-message-contact>
 
 
 

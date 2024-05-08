@@ -1,6 +1,7 @@
 <div class="containerMessageContact">
 <h3>Pour nous contacter</h3>
 
+<span style="color:red">{{messageFils}}</span>
 <form #contactForm="ngForm" (ngSubmit)="addContact(contactForm.value)">
   <div class="form-group">
     <label for="nom">Nom</label>

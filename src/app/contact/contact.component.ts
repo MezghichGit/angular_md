@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
 export class ContactComponent {
 
   ourCampany : string = "Smart IT Partner";
+  messageParent : string = "Tous les champs sont obligatoires!";
+
+  processEvent(message :any) {
+
+    alert("Message du fils est : " + message);
+  }
+
 
 }
