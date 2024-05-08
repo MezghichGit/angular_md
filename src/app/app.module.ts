@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DrpipePipe } from './drpipe.pipe';
 import { MedecinComponent } from './medecin/medecin.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { ListPostsComponent } from './list-posts/list-posts.component';
@@ -19,6 +19,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AproposComponent } from './apropos/apropos.component';
 import { MessageContactComponent } from './message-contact/message-contact.component';
+import { RegiterFormComponent } from './regiter-form/regiter-form.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +36,15 @@ import { MessageContactComponent } from './message-contact/message-contact.compo
     LoginComponent,
     LogoutComponent,
     AproposComponent,
-    MessageContactComponent
+    MessageContactComponent,
+    RegiterFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),

@@ -7,6 +7,7 @@ import { UpdateProviderComponent } from './update-provider/update-provider.compo
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGaurdService } from './services/auth-gaurd.service';
+import { RegiterFormComponent } from './regiter-form/regiter-form.component';
 
 
 
@@ -40,6 +41,10 @@ const routes: Routes = [
     component: LogoutComponent,
     canActivate:[AuthGaurdService]
   },
+  {
+    path: 'register',
+    component:RegiterFormComponent
+  }
 
 
 ];
