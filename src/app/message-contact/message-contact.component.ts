@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-message-contact',
@@ -7,7 +7,13 @@ import { Component, Input } from '@angular/core';
 })
 export class MessageContactComponent {
   @Input() messageFils:string="";
+  @Output() eventToSend = new EventEmitter();
+
   addContact(contactForm:any){
     alert(contactForm.nom+" "+contactForm.prenom+" "+contactForm.email+" "+contactForm.message);
+  }
+
+  sendEvent() {
+    this.eventToSend.emit(new Date());
   }
 }

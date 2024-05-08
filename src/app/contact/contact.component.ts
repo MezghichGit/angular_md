@@ -15,5 +15,9 @@ export class ContactComponent {
     alert("Message du fils est : " + message);
   }
 
+  processEvent2(message :any) {
+
+    alert("Nous somme le : " + message);
+  }
 
 }

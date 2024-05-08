@@ -1,6 +1,8 @@
 <div class="containerMessageContact">
 <h3>Pour nous contacter</h3>
 
+<button class="btn btn-primary" (click)="sendEvent()">Lancer event vers le pere</button>
+
 <span style="color:red">{{messageFils}}</span>
 <form #contactForm="ngForm" (ngSubmit)="addContact(contactForm.value)">
   <div class="form-group">
